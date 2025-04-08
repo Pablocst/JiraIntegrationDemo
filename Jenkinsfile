@@ -6,7 +6,7 @@ pipeline {
                     // Your build steps here
                     sh 'echo "Building..."'
                     // Send build information to Jira
-                    jiraSendBuildInfo(jiraSite: 'palbuquerque.atlassian.net')
+                    jiraSendBuildInfo(site: 'palbuquerque.atlassian.net')
                 }
             }
             stage('Deploy') {
