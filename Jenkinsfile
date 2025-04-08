@@ -6,7 +6,7 @@ pipeline {
                     // Your build steps here
                     sh 'echo "Building..."'
                     // Send build information to Jira
-                    jiraSendBuildInfo(jiraSite: 'palbuquerque.atlassian.net', issueKey: 'DFM-2')
+                    jiraSendBuildInfo()
                 }
             }
             stage('Deploy') {
@@ -14,7 +14,7 @@ pipeline {
                     // Your deployment steps here
                     sh 'echo "Deploying..."'
                     // Send deployment information to Jira
-                    jiraSendDeploymentInfo(jiraSite: 'palbuquerque.atlassian.net', issueKey: 'DFM-2')
+                    jiraSendDeploymentInfo()
                 }
             }
         }
